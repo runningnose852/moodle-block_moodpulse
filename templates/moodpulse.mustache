@@ -1,0 +1,60 @@
+<div class="block_moodpulse-moodpulse">
+    {{#editing}}
+        <div class="moodpulse-editinghint">
+            {{editinghint}}
+        </div>
+    {{/editing}}
+
+    <div class="moodpulse-question">
+        {{questiontext}}
+    </div>
+
+    {{^hasvoted}}
+        {{#canvote}}
+            <div class="moodpulse-buttons">
+                {{#moods}}
+                    <form method="post" action="{{actionurl}}" class="moodpulse-form">
+                        <input type="hidden" name="sesskey" value="{{sesskey}}">
+                        <input type="hidden" name="mood" value="{{key}}">
+                        <button type="submit" class="moodpulse-button">
+                            {{emoji}} {{label}}
+                        </button>
+                    </form>
+                {{/moods}}
+            </div>
+        {{/canvote}}
+    {{/hasvoted}}
+
+    {{#hasvoted}}
+        <div class="moodpulse-thanks">
+            ✅ {{thankyou}}
+        </div>
+    {{/hasvoted}}
+
+    <div class="moodpulse-count">
+        👥 {{checkedintoday}}
+    </div>
+
+    <div class="moodpulse-resultsheading">
+        {{resultsheading}}
+    </div>
+
+    {{#hasresults}}
+        {{#results}}
+            <div class="moodpulse-result">
+                <div class="moodpulse-resultlabel">
+                    {{emoji}} {{label}} — {{count}} vote(s) ({{percent}}%)
+                </div>
+                <div class="moodpulse-barouter">
+                    <div class="moodpulse-barinner" style="width: {{percent}}%;"></div>
+                </div>
+            </div>
+        {{/results}}
+    {{/hasresults}}
+
+    {{^hasresults}}
+        <div class="moodpulse-novotes">
+            {{novotes}}
+        </div>
+    {{/hasresults}}
+</div>
