@@ -46,3 +46,7 @@ $string['resultsheading'] = 'Class mood so far';
 $string['novotes'] = 'No votes yet.';
 $string['checkedintoday'] = '{$a} students checked in today';
 $string['editinghint'] = 'Teachers can customise the question in block settings.';
+$string['moodpulse:addinstance'] = 'Add a new Mood Pulse block';
+$string['moodpulse:myaddinstance'] = 'Add a new Mood Pulse block to the Dashboard';
+$string['moodpulse:vote'] = 'Submit a mood vote';
+
