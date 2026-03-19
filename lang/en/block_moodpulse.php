@@ -24,8 +24,8 @@
 
 $string['pluginname'] = 'Mood Pulse';
 $string['moodpulse:addinstance'] = 'Add a new Mood Pulse block';
-$string['moodpulse:myaddinstance'] = 'Add a new Mood Pulse block to Dashboard';
-$string['moodpulse:vote'] = 'Vote in Mood Pulse';
+$string['moodpulse:myaddinstance'] = 'Add a new Mood Pulse block to the Dashboard';
+$string['moodpulse:vote'] = 'Submit a mood vote';
 
 $string['prompt'] = 'How are you feeling today?';
 $string['question'] = 'How are you feeling today?';
@@ -46,7 +46,3 @@ $string['resultsheading'] = 'Class mood so far';
 $string['novotes'] = 'No votes yet.';
 $string['checkedintoday'] = '{$a} students checked in today';
 $string['editinghint'] = 'Teachers can customise the question in block settings.';
-$string['moodpulse:addinstance'] = 'Add a new Mood Pulse block';
-$string['moodpulse:myaddinstance'] = 'Add a new Mood Pulse block to the Dashboard';
-$string['moodpulse:vote'] = 'Submit a mood vote';
-
