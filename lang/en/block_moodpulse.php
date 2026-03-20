@@ -46,3 +46,5 @@ $string['resultsheading'] = 'Class mood so far';
 $string['novotes'] = 'No votes yet.';
 $string['checkedintoday'] = '{$a} students checked in today';
 $string['editinghint'] = 'Teachers can customise the question in block settings.';
+$string['privacy:metadata'] = 'The Mood Pulse block does not store any personal data.';
+
