@@ -73,7 +73,6 @@ class block_moodpulse extends block_base {
         $canvote = has_capability('block/moodpulse:vote', $context);
 
         $mood = optional_param('mood', '', PARAM_ALPHA);
-        $sesskeyparam = optional_param('sesskey', '', PARAM_RAW);
 
         $allowedmoods = ['happy', 'excited', 'okay', 'confused', 'tired'];
         $moodmap = [
@@ -97,13 +96,15 @@ class block_moodpulse extends block_base {
             [$USER->id, $COURSE->id, $startofday, $endofday]
         );
 
-        if (!empty($mood) &&
+        if (
+            $canvote &&
+            !empty($mood) &&
             in_array($mood, $allowedmoods, true) &&
-            confirm_sesskey($sesskeyparam) &&
             isloggedin() &&
             !isguestuser() &&
-            !$existingvote &&
-            $canvote) {
+            !$existingvote
+        ) {
+            require_sesskey();
 
             $record = new stdClass();
             $record->userid = $USER->id;
